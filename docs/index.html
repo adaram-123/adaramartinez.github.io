@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Adara Martinez">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adara's Portfolio</title>
+<link rel="icon" type="image/x-icon" href="favicon-2.ico">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #f8f6f0, #f4ede2);
+    color: #4a3f35;
+    min-height: 100vh;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #d7bfa6; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    user-select: none; 
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav-links li {
+    position: relative;
+    margin-left: 14px;
+  }
+
+  .nav-links li a, .dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a3f35;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links li a:hover, .dropdown:hover .dropbtn {
+    background-color: #d7bfa6;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .nav-links li a img {
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+    margin-right: 6px;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links li a:hover img {
+    transform: scale(1.1);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    min-width: 100%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 14px 18px;
+    color: #4a3f35;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown-content a:hover {
+    background-color: rgba(215, 191, 166, 0.6); 
+    color: white;
+    transform: scale(1.03);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.25s ease;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-6x);}
+    to {opacity: 1; transform: translateY(0);} 
+  }
+
+  .dropdown-content a:first-child { border-top-left-radius: 10px; border-top-right-radius: 10px; }
+  .dropdown-content a:last-child { border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Adara Martinez Del Toro</div>
+
+  <ul class="nav-links">
+    <li><a href="#Home"><img src="homeicon.png" alt="Home">Home</a></li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn"><img src="projecticon.png" alt="Projects">Projects</a>
+      <div class="dropdown-content">
+        <a href="#Project1">Project 1</a>
+        <a href="#Project2">Project 2</a>
+        <a href="#Project3">Project 3</a>
+      </div>
+    </li>
+
+    <li><a href="#Techskills"><img src="techskills.png" alt="Skills">Tech Skills</a></li>
+    <li><a href="#AboutMe"><img src="aboutme.png" alt="About Me">About Me</a></li>
+    <li><a href="#Contact"><img src="contacticon.png" alt="Contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section style="text-align:center; padding:40px;">
+  <h2>Welcome to Adara's Portfolio</h2>
+  <p>This is a simple portfolio website.</p>
+</section>
+
+</body>
+</html>
