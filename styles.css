@@ -378,6 +378,56 @@
     transform: scale(1.04);
   }
   
+  /* in-progress / featured project */
+  .project-card--featured {
+    border: 1.5px dashed var(--accent);
+    background: linear-gradient(160deg, rgba(255,255,255,0.85), rgba(244,237,226,0.85));
+  }
+
+  .project-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--accent);
+    color: var(--accent-dark);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-dark);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.35; transform: scale(0.75); }
+  }
+
+  .project-link--soon {
+    background: transparent;
+    color: var(--accent-dark);
+    border: 1.5px solid var(--accent);
+    cursor: default;
+  }
+
+  .project-link--soon:hover {
+    background: transparent;
+    transform: none;
+  }
+
   /* tech skills */
   .skills-grid {
     display: grid;
